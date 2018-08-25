@@ -21,6 +21,12 @@
         {
             "matches": ["https://www.amazon.com/*"],
             "js": ["js/execScript_amazonResult.js"]
+        },
+        {
+            "matches": ["https://keep.google.com/*"],
+            "js": ["js/execScript.js"],
+            "dpd_fragment": "#label/todo",
+            "dpd_title": "Todos"
         }
     ]
 }
