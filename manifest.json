@@ -28,7 +28,7 @@
         {
             "matches": ["https://keep.google.com/*"],
             "js": ["js/execScript.js"],
-            "dpd_fragment": "#label/todo",
+            "dpd_fragment": "#label/Todos",
             "dpd_title": "Todos"
         }
     ],
