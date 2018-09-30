@@ -66,8 +66,6 @@ function convertMatchPatternToRegExp(pattern) {
     return new RegExp(regex);
 }
 
-
-
 function getPropertyFromConfig(url, property) {
     let manifestObj = MANIFEST_OBJ;
     let contentScripts = manifestObj.content_scripts;

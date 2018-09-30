@@ -6,6 +6,9 @@
         "tabs",
         "*://*/*"
     ],
+    "browser_action": {
+        "default_icon": "images/icon.png"
+    },
     "icons": {
         "16": "images/icon.png",
         "48": "images/icon.png",
@@ -28,5 +31,9 @@
             "dpd_fragment": "#label/todo",
             "dpd_title": "Todos"
         }
-    ]
+    ],
+    "background": {
+        "scripts": [ "js/background/background_listenForReload.js" ],
+        "persistent": false
+    }
 }
