@@ -2,10 +2,7 @@
     "name": "PageTitleChanger",
     "version": "0.1",
     "description": "",
-    "permissions": [
-        "tabs",
-        "*://*/*"
-    ],
+    "permissions": ["tabs", "*://*/*"],
     "browser_action": {
         "default_icon": "images/icon.png"
     },
@@ -14,7 +11,6 @@
         "48": "images/icon.png",
         "128": "images/icon.png"
     },
-    "content_security_policy": "script-src 'self' 'unsafe-eval' https://www.google.com; object-src 'self'",
     "manifest_version": 2,
     "content_scripts": [
         {
@@ -33,7 +29,7 @@
         }
     ],
     "background": {
-        "scripts": [ "js/background/background_listenForReload.js" ],
+        "scripts": ["js/background/background_listenForReload.js"],
         "persistent": false
     }
 }
