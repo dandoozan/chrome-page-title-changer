@@ -2,7 +2,7 @@
     "name": "PageTitleChanger",
     "version": "0.1",
     "description": "",
-    "permissions": ["tabs", "*://*/*"],
+    "permissions": ["<all_urls>"],
     "browser_action": {},
     "manifest_version": 2,
     "content_scripts": [
