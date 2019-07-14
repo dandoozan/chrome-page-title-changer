@@ -1,4 +1,3 @@
-
 const MANIFEST_OBJ = chrome.runtime.getManifest();
 
 /*The below is from: https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Match_patterns
@@ -12,7 +11,7 @@ const MANIFEST_OBJ = chrome.runtime.getManifest();
  */
 function convertMatchPatternToRegExp(pattern) {
     if (pattern === '') {
-        return (/^(?:http|https|file|ftp|app):\/\//);
+        return /^(?:http|https|file|ftp|app):\/\//;
     }
 
     const schemeSegment = '(\\*|http|https|file|ftp)';
@@ -72,7 +71,9 @@ function getPropertyFromConfig(url, property) {
     for (let scriptObj of contentScripts) {
         let matchesArr = scriptObj.matches;
         for (let urlPatternAsMatchPattern of matchesArr) {
-            let urlPatternAsRegex = convertMatchPatternToRegExp(urlPatternAsMatchPattern);
+            let urlPatternAsRegex = convertMatchPatternToRegExp(
+                urlPatternAsMatchPattern
+            );
             if (new RegExp(urlPatternAsRegex).test(url)) {
                 return scriptObj[property];
             }
@@ -92,16 +93,13 @@ function urlContainsFragment(url, fragment) {
     return url.indexOf(fragment) > -1;
 }
 
-
 /* ---------- MAIN ---------- */
 let url = getUrl();
 
 //fyi, I have to check for the 'fragment' part of the url (ie. the part
 //after the '#') here b/c the manifest 'matches' url thing doesn't take
 //into account the url fragment
-let urlFragment = getPropertyFromConfig(url, 'dpd_fragment');
-if (!urlFragment || urlContainsFragment(url, urlFragment)) {
-    let newTitleOfPage = getPropertyFromConfig(url, 'dpd_title');
-    setTitle(newTitleOfPage);
+let { fragment, title } = getPropertyFromConfig(url, 'myConfig');
+if (!fragment || urlContainsFragment(url, fragment)) {
+    setTitle(title);
 }
-

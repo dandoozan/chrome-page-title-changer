@@ -23,9 +23,11 @@
         },
         {
             "matches": ["https://keep.google.com/*"],
-            "js": ["js/contentScripts/gkeep.js"],
-            "dpd_fragment": "#label/Todos",
-            "dpd_title": "Todos"
+            "js": ["js/contentScripts/general.js"],
+            "myConfig": {
+                "fragment": "#label/Todos",
+                "title": "Todos"
+            }
         }
     ],
     "background": {
