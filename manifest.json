@@ -15,15 +15,15 @@
     "content_scripts": [
         {
             "matches": ["https://www.amazon.com/s/*"],
-            "js": ["js/execScript_amazon.js"]
+            "js": ["js/contentScripts/amazon.js"]
         },
         {
             "matches": ["https://www.amazon.com/*"],
-            "js": ["js/execScript_amazonResult.js"]
+            "js": ["js/contentScripts/amazonResult.js"]
         },
         {
             "matches": ["https://keep.google.com/*"],
-            "js": ["js/execScript.js"],
+            "js": ["js/contentScripts/gkeep.js"],
             "dpd_fragment": "#label/Todos",
             "dpd_title": "Todos"
         }
