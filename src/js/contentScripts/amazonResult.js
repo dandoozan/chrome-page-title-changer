@@ -1,8 +1,11 @@
-let oldTitle = document.title;
+import { Page } from './_Page'
 
-//Example Title transformations:
-//"Amazon.com: abc" -> "abc"
-//"Amazon.com : abc" -> "abc"
-let newTitle = oldTitle.replace(/^Amazon\.com\s*:\s*(.*)/, '$1');
+export default class AmazonResults extends Page {
+    static getNewTitle(oldTitle) {
+        //Example Title transformations:
+        //"Amazon.com: abc" -> "abc"
+        //"Amazon.com : abc" -> "abc"
 
-document.title = newTitle;
+        return oldTitle.replace(/^Amazon\.com\s*:\s*(.*)/, '$1');
+    }
+}

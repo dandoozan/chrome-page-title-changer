@@ -7,17 +7,26 @@
     "manifest_version": 2,
     "content_scripts": [
         {
-            "matches": ["https://www.amazon.com/s/*"],
-            "js": ["js/contentScripts/amazon.bundle.js"]
+            "matches": [
+                "https://www.amazon.com/s/*",
+                "https://www.amazon.com/s?*"
+            ],
+            "js": [
+                "js/contentScripts/Amazon.bundle.js",
+                "js/contentScripts/_main.bundle.js"
+            ]
         },
         {
             "matches": ["https://www.amazon.com/*"],
-            "js": ["js/contentScripts/amazonResult.bundle.js"]
+            "js": [
+                "js/contentScripts/AmazonResult.bundle.js",
+                "js/contentScripts/_main.bundle.js"
+            ]
         },
         {
             "matches": ["https://keep.google.com/*"],
-            "js": ["js/contentScripts/general.bundle.js"],
-            "myConfig": {
+            "js": ["js/contentScripts/_main.bundle.js"],
+            "my_config": {
                 "fragment": "#label/Todos",
                 "title": "Todos"
             }
