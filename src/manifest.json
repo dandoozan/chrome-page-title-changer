@@ -8,15 +8,15 @@
     "content_scripts": [
         {
             "matches": ["https://www.amazon.com/s/*"],
-            "js": ["js/contentScripts/amazon.js"]
+            "js": ["js/contentScripts/amazon.bundle.js"]
         },
         {
             "matches": ["https://www.amazon.com/*"],
-            "js": ["js/contentScripts/amazonResult.js"]
+            "js": ["js/contentScripts/amazonResult.bundle.js"]
         },
         {
             "matches": ["https://keep.google.com/*"],
-            "js": ["js/contentScripts/general.js"],
+            "js": ["js/contentScripts/general.bundle.js"],
             "myConfig": {
                 "fragment": "#label/Todos",
                 "title": "Todos"
@@ -24,7 +24,7 @@
         }
     ],
     "background": {
-        "scripts": ["js/background/background_listenForReload.js"],
+        "scripts": ["js/background/background.bundle.js"],
         "persistent": false
     }
 }
