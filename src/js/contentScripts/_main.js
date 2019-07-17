@@ -1,4 +1,4 @@
-import { getMatchesObjectFromManifest } from '../utils';
+import { getContentScriptObject } from '../utils';
 
 function setTitle(title) {
     document.title = title;
@@ -20,7 +20,7 @@ function urlContainsFragment(url, fragment) {
 
     //first, get the config for this page
     let { fragment, title: newTitle } =
-        getMatchesObjectFromManifest(url).my_config || {};
+        getContentScriptObject(url).my_config || {};
 
     //then, set the title
     //NOTE: I have to check for the 'fragment' part of the url (ie. the part

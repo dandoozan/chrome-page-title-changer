@@ -12,7 +12,7 @@ module.exports = {
             `${PATH_TO_SRC}/js/background/*.js`
         ),
         // 'js/popup': './js/popup.js',
-        // 'js/options': './js/options.js',
+        'js/options': './js/options.js',
         'js/contentScripts/_main': './js/contentScripts/_main.js',
 
         //generate entries for the page-specific content scripts
