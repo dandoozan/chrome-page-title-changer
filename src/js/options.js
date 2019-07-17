@@ -1,7 +1,7 @@
 import { readFromStorage, writeToStorage, clearStorage } from './utils';
 
-function displayMessage(id, msg) {
-    var el = document.getElementById(id);
+function displayMessage(elId, msg) {
+    var el = document.getElementById(elId);
     el.textContent = msg;
     setTimeout(function() {
         el.textContent = '';
@@ -11,11 +11,8 @@ function displayMessage(id, msg) {
 // Saves options to chrome.storage
 async function saveOptions() {
     //todo: handle case when the textarea doesnt contain valid json
-    //todo: try just saving the options as json
     await writeToStorage({
-        options: JSON.stringify(
-            JSON.parse(document.getElementById('optionsTextArea').value)
-        ),
+        options: JSON.parse(document.getElementById('optionsTextArea').value),
     });
 
     // Update status to let user know options were saved
@@ -24,11 +21,7 @@ async function saveOptions() {
 
 // Restores preferences stored in chrome.storage
 async function restoreOptions() {
-    // console.log(`***` + (await readFromStorage(null)));
-    let options = JSON.parse(
-        (await readFromStorage({ options: '{}' })).options
-    );
-    console.log('​restoreOptions -> options=', options);
+    let { options } = await readFromStorage({ options: {} });
 
     //display the options on the page
     document.getElementById('optionsTextArea').value = JSON.stringify(
