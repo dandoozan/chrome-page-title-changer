@@ -8,7 +8,7 @@ function urlContainsFragment(url, fragment) {
     return url.indexOf(fragment) > -1;
 }
 
-(function main() {
+(async function main() {
     //NOTE: "pageModule" is available as a global variable because
     //each of the page scripts are built as a "library" by webpack, which exports the
     //module as a global variable.  I had to do it this way because chrome extensions don't
@@ -20,8 +20,7 @@ function urlContainsFragment(url, fragment) {
     let oldTitle = document.title;
 
     //first, get the config for this page
-    let { fragment, title: newTitle } =
-        getContentScriptObject(url).my_config || {};
+    let { fragment, title: newTitle } = await getContentScriptObject(url) || {};
 
     //then, set the title
     //NOTE: I have to check for the 'fragment' part of the url (ie. the part
