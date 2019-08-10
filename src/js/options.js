@@ -1,4 +1,4 @@
-import { readFromStorage, writeToStorage, clearStorage } from './utils';
+import { readFromStorage, writeToStorage, clearStorage } from './helpers/chrome';
 
 function displayMessage(elId, msg) {
     var el = document.getElementById(elId);

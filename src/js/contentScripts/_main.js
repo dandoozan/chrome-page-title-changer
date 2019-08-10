@@ -1,4 +1,4 @@
-import { getContentScriptObject } from '../utils';
+import { getContentScriptObject } from '../helpers/chrome';
 
 (async function main() {
     let url = window.location.href;
