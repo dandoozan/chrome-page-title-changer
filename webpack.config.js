@@ -11,7 +11,6 @@ module.exports = {
     'js/background/background': glob.sync(`${PATH_TO_SRC}/js/background/*.js`),
     // 'js/popup': './js/popup.js',
     'js/options': './js/options.js',
-    'js/contentScripts/_main': './js/contentScripts/_main.js',
 
     //generate entries for the page-specific content scripts
     ...glob
@@ -34,7 +33,7 @@ module.exports = {
 
     //copy everything in "src" except the "js" dir
     new CopyWebpackPlugin(
-      glob.sync(`${PATH_TO_SRC}/*`, { ignore: `**/js` }).map(pathToFile => {
+      glob.sync(`${PATH_TO_SRC}/*`, { ignore: `**/js` }).map((pathToFile) => {
         let basename = path.parse(pathToFile).base;
         return {
           from: basename,
