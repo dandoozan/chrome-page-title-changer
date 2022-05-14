@@ -15,4 +15,4 @@ setTimeout(() => {
   //use this rather than the url because opening a note within that label changes the url
   document.title =
     TITLE_MAPPING[attr('div.gk6SMd', 'aria-label')] || document.title;
-}, 500);
+}, 1000);
