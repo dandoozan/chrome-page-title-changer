@@ -1,1 +1,1 @@
-../../../../../_CommonJavaScript/out/dom.js
+../../../../javascript-common/out/dom.js

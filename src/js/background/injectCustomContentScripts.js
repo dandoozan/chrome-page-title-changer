@@ -1,1 +1,1 @@
-../../../../_CommonChromeExtensions/dist/injectCustomContentScripts.js
+../../../../chrome-common/dist/injectCustomContentScripts.js
