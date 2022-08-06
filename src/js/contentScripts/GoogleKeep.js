@@ -2,7 +2,7 @@ import { attr } from '../helpers/dom';
 
 const TITLE_MAPPING = {
   '_📥 INBOX': '📥 Inbox',
-  '__⭐️ ALL ACTIONS': '⭐️ All Actions',
+  '__⭐️ ACTIONS': '⭐️ Actions',
   '__🗓 CALENDAR': '🗓 Calendar',
   '_🕒 WAITING_FORS': '🕒 Waiting Fors',
   '_🗂 PROJECT_SUPPORT_MTRL': '🗂 Project Support Material',
