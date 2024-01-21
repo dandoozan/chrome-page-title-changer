@@ -1,12 +1,12 @@
 import { attr } from '../helpers/dom';
 
 const TITLE_MAPPING = {
-  '_📥 INBOX': '📥 Inbox',
-  '__⭐️ ACTIONS': '⭐️ Actions',
-  '__🗓 CALENDAR': '🗓 Calendar',
-  '_🕒 WAITING_FORS': '🕒 Waiting Fors',
-  '_🗂 PROJECT_SUPPORT_MTRL': '🗂 Project Support Material',
-  '_♾ INFINITY_PROJECTS': '♾ Infinity Projects',
+  '____📥 INBOX': '📥 Inbox',
+  '___⭐️ ACTIONS': '⭐️ Actions',
+  '___🕒 WAITING_FOR': '🕒 Waiting For',
+  '___🗓 CALENDAR': '🗓 Calendar',
+  '__♾️ INFINITY_PROJECTS': '♾ Infinity Projects',
+  '__🏁 PROJECTS': '🏁 Projects',
 };
 
 //wait a little bit for Google's script to apply the "gk6SMd" class to the right element
