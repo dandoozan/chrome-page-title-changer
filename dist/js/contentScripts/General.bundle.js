@@ -415,7 +415,7 @@ function convertMatchPatternToRegExp(pattern) {
 /*! exports provided: content_scripts, default */
 /***/ (function(module) {
 
-module.exports = JSON.parse("{\"content_scripts\":[{\"matches\":[\"https://www.amazon.com/s/*\",\"https://www.amazon.com/s?*\"],\"js\":[\"js/contentScripts/General.bundle.js\"],\"newTitle\":[\"^Amazon\\\\.com\\\\s*:\\\\s*(.*)\",\"S: $1\"]},{\"matches\":[\"https://www.amazon.com/*\"],\"js\":[\"js/contentScripts/General.bundle.js\"],\"newTitle\":[\"^Amazon\\\\.com\\\\s*[:|]\\\\s*(.*)\",\"$1\"]},{\"matches\":[\"https://keep.google.com/*\"],\"js\":[\"js/contentScripts/GoogleKeep.bundle.js\"]}]}");
+module.exports = JSON.parse("{\"content_scripts\":[{\"matches\":[\"https://www.amazon.com/s/*\",\"https://www.amazon.com/s?*\"],\"js\":[\"js/contentScripts/General.bundle.js\"],\"newTitle\":[\"^Amazon\\\\.com\\\\s*:\\\\s*(.*)\",\"S: $1\"]},{\"matches\":[\"https://www.amazon.com/*\"],\"js\":[\"js/contentScripts/General.bundle.js\"],\"newTitle\":[\"^Amazon\\\\.com\\\\s*[:|]\\\\s*(.*)\",\"$1\"]},{\"matches\":[\"https://keep.google.com/*\"],\"js\":[\"js/contentScripts/GoogleKeep.bundle.js\"]},{\"matches\":[\"https://xd.adobe.com/view/*\"],\"js\":[\"js/contentScripts/XD.bundle.js\"]}]}");
 
 /***/ })
 
