@@ -335,7 +335,7 @@ function convertMatchPatternToRegExp(pattern) {
 /*! exports provided: content_scripts, default */
 /***/ (function(module) {
 
-module.exports = JSON.parse("{\"content_scripts\":[{\"matches\":[\"https://www.amazon.com/s/*\",\"https://www.amazon.com/s?*\"],\"js\":[\"js/contentScripts/General.bundle.js\"],\"newTitle\":[\"^Amazon\\\\.com\\\\s*:\\\\s*(.*)\",\"S: $1\"]},{\"matches\":[\"https://www.amazon.com/*\"],\"js\":[\"js/contentScripts/General.bundle.js\"],\"newTitle\":[\"^Amazon\\\\.com\\\\s*[:|]\\\\s*(.*)\",\"$1\"]},{\"matches\":[\"https://keep.google.com/*\"],\"js\":[\"js/contentScripts/GoogleKeep.bundle.js\"]},{\"matches\":[\"https://xd.adobe.com/view/*\"],\"js\":[\"js/contentScripts/XD.bundle.js\"]}]}");
+module.exports = JSON.parse("{\"content_scripts\":[{\"matches\":[\"https://www.amazon.com/s/*\",\"https://www.amazon.com/s?*\"],\"js\":[\"js/contentScripts/General.bundle.js\"],\"newTitle\":[\"^Amazon\\\\.com\\\\s*:\\\\s*(.*)\",\"S: $1\"]},{\"matches\":[\"https://www.amazon.com/*\"],\"js\":[\"js/contentScripts/General.bundle.js\"],\"newTitle\":[\"^Amazon\\\\.com\\\\s*[:|]\\\\s*(.*)\",\"$1\"]},{\"matches\":[\"https://dev-bios-ws2.ws.asu.edu/*\"],\"js\":[\"js/contentScripts/ASU.bundle.js\"]},{\"matches\":[\"https://*.ddev.site/*\"],\"js\":[\"js/contentScripts/General.bundle.js\"],\"newTitle\":[\"(.*)\",\"[🏠]$1\"]},{\"matches\":[\"https://keep.google.com/*\"],\"js\":[\"js/contentScripts/GoogleKeep.bundle.js\"]},{\"matches\":[\"https://xd.adobe.com/view/*\"],\"js\":[\"js/contentScripts/XD.bundle.js\"]}]}");
 
 /***/ }),
 
